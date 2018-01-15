@@ -1,0 +1,30 @@
+{
+  "name": "monero-wallet-generator",
+  "version": "1.0.0",
+  "description": "Generate Monero Wallets Using NodeJS",
+  "main": "index.js",
+  "dependencies": {
+    "polyfill-crypto.getrandomvalues": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/variably/MoneroAddressGenerator.git"
+  },
+  "keywords": [
+    "Monero",
+    "Wallet",
+    "Generator",
+    "Address",
+    "NodeJS"
+  ],
+  "author": "Variably",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/variably/MoneroAddressGenerator/issues"
+  },
+  "homepage": "https://github.com/variably/MoneroAddressGenerator#readme"
+}
