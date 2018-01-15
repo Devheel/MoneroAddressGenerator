@@ -1,8 +1,8 @@
 var NODE_JS = typeof(module) != 'undefined';
 if(NODE_JS) {
-  root = global;
-  if(root.JS_SHA3_TEST) {
-    root.navigator = { userAgent: 'Chrome'};
+  rootvar = global;
+  if(rootvar.JS_SHA3_TEST) {
+    rootvar.navigator = { userAgent: 'Chrome'};
   }
 }
 var HEX_CHARS = '0123456789abcdef'.split('');
@@ -99,7 +99,7 @@ function Keccak(bits, padding, outputBits) {
 
 Keccak.prototype.update = function(message) {
   var notString = typeof(message) != 'string';
-  if(notString && message.constructor == root.ArrayBuffer) {
+  if(notString && message.constructor == rootvar.ArrayBuffer) {
     message = new Uint8Array(message);
   }
   var length = message.length, blocks = this.blocks, byteCount = this.byteCount, 
@@ -451,10 +451,10 @@ var f = function(s) {
   }
 }
 
-if(!root.JS_SHA3_TEST && NODE_JS) {
+if(!rootvar.JS_SHA3_TEST && NODE_JS) {
   module.exports = methods;
-} else if(root) {
+} else if(rootvar) {
   for(var key in methods) {
-    root[key] = methods[key];
+    rootvar[key] = methods[key];
   }
 }
